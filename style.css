@@ -1,0 +1,273 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #001f3f; 
+    color: #fff;
+}
+
+main {
+    flex: 1;
+    padding-top: 80px; 
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0px;
+}
+
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-bottom: 20px; 
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+form input[type="text"], form input[type="email"] {
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #066cd1;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #003366;
+}
+
+iframe {
+    width: 100%;
+    max-width: 1980px; 
+    border-radius: 10px;
+}
+
+.logo {
+    float: left;
+    padding: 15px 20px;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 15px 20px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 15px 20px;
+}
+
+.burger span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    min-height: 100ch; 
+}
+
+.section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.image-container {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    transition: transform 0.3s;
+    border-radius: 10px;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer ul li {
+    margin: 0 15px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        padding: 80px 20px;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav.active ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 80px; /* Отступ под хедером */
+    }
+
+    .burger {
+        display: flex;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .burger span {
+        background-color: #fff;
+        margin: 5px 0;
+        height: 3px;
+        width: 25px;
+        transition: all 0.3s;
+    }
+
+    .burger.active span:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 8px;
+    }
+
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -8px;
+    }
+
+    nav ul li {
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+}
